@@ -1,0 +1,4 @@
+# ------------ LEDs -----------------------------------------------------------
+set_io --warn-no-port a  J11  # input
+set_io --warn-no-port na K11  # output
+
