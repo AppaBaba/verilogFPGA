@@ -1,5 +1,0 @@
-
-set_io tick G14  # ioled0
-
-set_io clk  P7  # 100MHz clock
-
