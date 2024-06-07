@@ -6,7 +6,7 @@ module prescaler
     output wire tick
  );
 
-parameter N = 29;
+parameter N = 25;
 reg [N-1:0] p = 0;
 assign tick = p[N-1];
 always @  (posedge clk)
