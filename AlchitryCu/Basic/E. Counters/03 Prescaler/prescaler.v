@@ -1,5 +1,4 @@
 
-
 module prescaler
 (
     input wire clk,
