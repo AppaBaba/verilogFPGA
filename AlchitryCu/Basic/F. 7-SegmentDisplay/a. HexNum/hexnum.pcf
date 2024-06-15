@@ -1,0 +1,21 @@
+set_io clk     P7
+#set_io notrst  P8
+
+# 7-segment Display
+set_io seg[0]  P1
+set_io seg[1]  M1
+set_io seg[2]  L1
+set_io seg[3]  K3
+set_io seg[4]  K4
+set_io seg[5]  N1
+set_io seg[6]  J3
+set_io seg[7]  J1
+
+# 4 an select
+set_io an[0]   G3
+set_io an[1]   G1
+set_io an[2]   H1
+set_io an[3]   H3
+
+
+
