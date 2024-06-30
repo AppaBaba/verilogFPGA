@@ -1,1 +1,1 @@
-# verilogFPGA Using verilog to synthesize to FPGA
+# verilogFPGA Using verilog to synthesize to FPGA
