@@ -1,8 +1,8 @@
 
-PROJ = halfAdderGL
+PROJ = fullAdderDF
 
 DEVICE = hx8k
-PINS = ../halfAdder.pcf
+PINS = ../fullAdder.pcf
 PACKAGE = cb132
 
 include ../Adder.mk

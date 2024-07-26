@@ -1,5 +1,5 @@
 
-PROJ = halfAdderGL
+PROJ = halfAdderDF
 
 DEVICE = hx8k
 PINS = ../halfAdder.pcf

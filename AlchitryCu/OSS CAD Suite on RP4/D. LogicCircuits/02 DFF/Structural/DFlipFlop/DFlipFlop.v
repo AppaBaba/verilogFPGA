@@ -1,3 +1,36 @@
+module Dlatch(Dq, Dnotq, Dgate, Dd);
+   output Dq;
+   output Dnotq;
+   input  Dgate;   
+   input  Dd;
+
+   wire   notd;
+   wire   d1;
+   wire   notd1;
+
+   not(notd, Dd);   
+   and(d1, Dgate, Dd);
+   and(notd1, Dgate, notd);   
+   nor(Dnotq, d1, Dq);
+   nor(Dq, notd1, Dnotq);
+endmodule
+
+module SRlatch(SRq, SRnotq, SRgate, s, r);
+   output SRq;
+   output SRnotq;
+   input  SRgate;   
+   input  s;
+   input  r;
+
+   wire   s1;
+   wire   r1;
+   
+   and(s1, SRgate, s);
+   and(r1, SRgate, r);   
+   nor(SRnotq, s1, SRq);
+   nor(SRq, r1, SRnotq);
+endmodule
+
 module DFlipFlop(q, notq, clk, d);
    output q;
    output notq;
@@ -13,37 +46,4 @@ module DFlipFlop(q, notq, clk, d);
    not(cnn, cn);   
    Dlatch dl(dq, dqn, cn, d);
    SRlatch sr(q, notq, cnn, dq, dqn);   
-endmodule
-
-module Dlatch(q, notq, gate, d);
-   output q;
-   output notq;
-   input  gate;   
-   input  d;
-
-   wire   notd;
-   wire   d1;
-   wire   notd1;
-
-   not(notd, d);   
-   and(d1, gate, d);
-   and(notd1, gate, notd);   
-   nor(notq, d1, q);
-   nor(q, notd1, notq);
-endmodule
-
-module SRlatch(q, notq, gate, s, r);
-   output q;
-   output notq;
-   input  gate;   
-   input  s;
-   input  r;
-
-   wire   s1;
-   wire   r1;
-   
-   and(s1, gate, s);
-   and(r1, gate, r);   
-   nor(notq, s1, q);
-   nor(q, r1, notq);
 endmodule

@@ -1,5 +1,0 @@
-
-#set_io A J11
-#set_io B K11
-set_io S K12
-set_io C K14

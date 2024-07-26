@@ -1,5 +1,5 @@
 
-all: $(PROJ).bin
+do: $(PROJ).bin
 	@
 
 %.blif: %.v
@@ -25,4 +25,4 @@ erase:
 	rm -f $(PROJ).blif $(PROJ).asc $(PROJ).rpt $(PROJ).bin
 
 .SECONDARY:
-.PHONY: all prog clean
+.PHONY: do load erase
